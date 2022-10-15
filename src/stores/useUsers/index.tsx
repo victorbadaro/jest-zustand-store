@@ -1,15 +1,5 @@
 import create from 'zustand';
-
-interface User {
-	id: string;
-	name: string;
-}
-
-interface UseUsersStore {
-	users: User[];
-	addUser: (user: User) => void;
-	removeUser: (id: string) => void;
-}
+import { UseUsersStore } from './types';
 
 export const useUsersStore = create<UseUsersStore>((set, get) => ({
 	users: [],
